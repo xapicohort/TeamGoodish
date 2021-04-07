@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+
+<body onload="botloadingmsg()">
+
+		<h1>👋 Chatbot </h1>
+
+<div id='bodyChatLog'>
+  <div id='chatborder' style="text-align:left">
+		<p id="chatlog8" class="chatlog">&nbsp;</p>
+    <p id="chatlog7" class="chatlog">&nbsp;</p>
+    <p id="chatlog6" class="chatlog">&nbsp;</p>
+    <p id="chatlog5" class="chatlog">&nbsp;</p>
+    <p id="chatlog4" class="chatlog">&nbsp;</p>
+    <p id="chatlog3" class="chatlog">&nbsp;</p>
+    <p id="chatlog2" class="chatlog">&nbsp;</p>
+    <p id="chatlog1" class="chatlog">&nbsp;</p>
+		<input type="text" name="chat" id="chatbox" placeholder="Enter to send." onfocus="placeHolder()">
+</div>
+	<div style="text-align:right">
+		<button onclick="location.reload()"><h2> Reset (F5) </h2></button>
+	</div>
+
+</div>
+
+<script src="js/chatbot.js"></script>
+<!-- Custom JS -->
+<script src="js/interaction.js"></script>
+
+<script src="js/cryptojs_v3.1.2.js"></script>
+<script src="js/xapiwrapper.js"></script>
+
+</body>
+
+</html>
