@@ -2,7 +2,35 @@ body {
   font-family: system-ui;
   background: #f06d06;
   color: white;
+}
 
+table {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+p {
+  text-indent: -65px;
+  padding-left: 65px;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 2%;
+  padding-bottom: 15px;
+}
+
+pre {
+  background-color: #f0f0f0;
+  margin-left: 20px;
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
 }
 
 #bodyChatLog {
@@ -11,53 +39,53 @@ body {
   max-width: 60%;
   max-height: 90%;
   font: 15px arial, sans-serif;
-  background-color: white;
-  border-style: solid;
   border-width: 1px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
   border-radius: 15px;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
 }
 
 #chatborder {
   border-style: solid;
   background-color: grey;
-  border-width: 3px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-top: 10px;
   padding-bottom: 15px;
   padding-right: 20px;
-  padding-left: 15px;
+  padding-left: 20px;
   border-radius: 15px;
-
 }
 
 .chatlog {
-   font: 15px arial, sans-serif;
-   height: 80%
+  font: 15px arial, sans-serif;
+  height: 80% max-width: 100%;
 }
 
 #chatbox {
   font: 15px arial, sans-serif;
   height: 22px;
   width: 100%;
-
 }
 
-h1 {
-  margin: auto;
-  text-align: center;
-  font-size: 70px;
-  padding-top: 2%;
-  padding-bottom: 15px;
+.RestBottom {
+  text-align: right;
 }
 
-pre {
-  background-color: #f0f0f0;
-  margin-left: 20px;
+.ErrorMessage {
+  background-color: white;
+  color: red;
+  font: 15px arial, sans-serif;
+  text-indent: 0px;
+  padding-left: 0px;
+
 }
