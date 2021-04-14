@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title></title>
-  	<!-- Custom CSS -->
-  	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<title>Chatbot</title>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
 <body onload="botloadingmsg()">
 
-		<h1>👋 Chatbot </h1>
+	<h1>👋 Chatbot </h1>
 
-<div id='bodyChatLog'>
-  <div id='chatborder' style="text-align:left">
-		<p id="chatlog8" class="chatlog">&nbsp;</p>
-    <p id="chatlog7" class="chatlog">&nbsp;</p>
-    <p id="chatlog6" class="chatlog">&nbsp;</p>
-    <p id="chatlog5" class="chatlog">&nbsp;</p>
-    <p id="chatlog4" class="chatlog">&nbsp;</p>
-    <p id="chatlog3" class="chatlog">&nbsp;</p>
-    <p id="chatlog2" class="chatlog">&nbsp;</p>
-    <p id="chatlog1" class="chatlog">&nbsp;</p>
-		<input type="text" name="chat" id="chatbox" placeholder="Enter to send." onfocus="placeHolder()">
-</div>
-	<div style="text-align:right">
-		<button onclick="location.reload()"><h2> Reset (F5) </h2></button>
+	<div id='bodyChatLog'>
+		<div id='chatborder' style="text-align:left">
+			<!-- <textarea rows="20" style="width: 100%; max-width: 100%;" id ="description">-->
+			<p id="chatlog15" class="chatlog">&nbsp;</p>
+			<p id="chatlog14" class="chatlog">&nbsp;</p>
+			<p id="chatlog13" class="chatlog">&nbsp;</p>
+			<p id="chatlog12" class="chatlog">&nbsp;</p>
+			<p id="chatlog11" class="chatlog">&nbsp;</p>
+			<p id="chatlog10" class="chatlog">&nbsp;</p>
+			<p id="chatlog9" class="chatlog">&nbsp;</p>
+			<p id="chatlog8" class="chatlog">&nbsp;</p>
+			<p id="chatlog7" class="chatlog">&nbsp;</p>
+			<p id="chatlog6" class="chatlog">&nbsp;</p>
+			<p id="chatlog5" class="chatlog">&nbsp;</p>
+			<p id="chatlog4" class="chatlog">&nbsp;</p>
+			<p id="chatlog3" class="chatlog">&nbsp;</p>
+			<p id="chatlog2" class="chatlog">&nbsp;</p>
+			<p id="chatlog1" class="chatlog">&nbsp;</p>
+			<!-- </textarea>-->
+
+			<input type="text" name="chat" id="chatbox" placeholder="Click to enter to send." onfocus="placeHolder()">
+		</div>
+		<div>
+			<table width=100%>
+				<td width=80%>
+					<p id="inputerrorMsge" class="ErrorMessage">&nbsp;</p>
+				</td>
+				<td class="RestBottom">
+					<button onclick="location.reload()">
+						<h2> Reset (F5) </h2>
+					</button>
+				</td>
+
+			</table>
+
+		</div>
+
 	</div>
 
-</div>
 
-<script src="js/chatbot.js"></script>
-<!-- Custom JS -->
-<script src="js/interaction.js"></script>
-
-<script src="js/cryptojs_v3.1.2.js"></script>
-<script src="js/xapiwrapper.js"></script>
+	<script src="js/Test.js"></script>
+	<script src="js/chatbot.js"></script>
+	<script src="js/cryptojs_v3.1.2.js"></script>
+	<script src="js/xapiwrapper.js"></script>
 
 </body>
 
