@@ -40,8 +40,6 @@ function sendStatement() {
   }
   ADL.XAPIWrapper.sendStatement(statement);
 
-  // Alert message
-  alert('Statement has been sent!')
 }
 
 //****************************************************************************************
