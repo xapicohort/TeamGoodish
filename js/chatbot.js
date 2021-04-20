@@ -39,8 +39,9 @@ function sendStatement1() {
     }
   }
   ADL.XAPIWrapper.sendStatement(statement);
-
+ 
 }
+
 // question 1
 function sendStatement2() {
   //makeid(8);
@@ -70,6 +71,9 @@ function sendStatement2() {
     }
   }
   ADL.XAPIWrapper.sendStatement(statement);
+ 
+}
+
 //****************************************************************************************
 
 //gloabl variabls - Rarry
@@ -138,7 +142,7 @@ function chatbotResponse() {
 
     vUsername = lastUserMessage.substring(0, 50);
     //chatbox messages
-    botMessage = "Thank you, " + vuser + "!" + "<br> <br> We all have unconscious biases. To act on our values for diversity and inclusion, it is important that we identify and interrupt our biases to avoid making decisions based on them. <br> <br> Let’s review how racial bias often turns up the sourcing process for new hires. This chatbot will help you to assess your own ability to interrupt racial bias and it will provide you with tools and resources, if needed. <br><br> Self assessment: Do you agree with the following statement? <br><br> <i>I am aware of how racial bias occurs in the sourcing process.</i> <br><br> &nbsp; &nbsp; 1. Strongly agree <br> &nbsp; &nbsp; 2. Agree <br>&nbsp; &nbsp; 3. Unsure <br> &nbsp; &nbsp; 4. Disagree <br>&nbsp; &nbsp;  5. Strongly disagree <br> <br><i>Enter a number to respond.</i>";;
+    botMessage = "Thank you, " + vuser + "!" + "<br> <br> We all have unconscious biases. To act on our values for diversity and inclusion, it is important that we identify and interrupt our biases to avoid making decisions based on them. <br> <br> Let’s review how racial bias often turns up the sourcing process for new hires. This chatbot will help you to assess your own ability to interrupt racial bias and it will provide you with tools and resources, if needed. <br><br> Self assessment: Do you agree with the following statement? <br><br> <i>&quot;I am aware of how racial bias occurs in the sourcing process.&quot;</i> <br><br> &nbsp; &nbsp; 1. Strongly agree <br> &nbsp; &nbsp; 2. Agree <br>&nbsp; &nbsp; 3. Unsure <br> &nbsp; &nbsp; 4. Disagree <br>&nbsp; &nbsp;  5. Strongly disagree <br> <br><i>Enter a number to respond.</i>";;
     //Chatlog messages
     messages.push("&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <b>" + 'You' + ":</b> " + vUsername);
     messages.push("<b>" + botName + ":</b> " + botMessage);
