@@ -85,10 +85,10 @@ function chatbotResponse() {
 
     //lastUserMessage.split(" ")[0] &  lastUserMessage.split(" ")[1];
 
-    var fullNmae = lastUserMessage.split(" ")[0] + lastUserMessage.split(" ")[1]; //split the string before and after the first space
+    var fullName = lastUserMessage.split(" ")[0] + lastUserMessage.split(" ")[1]; //split the string before and after the first space
     vuser = lastUserMessage.split(" ")[0] + " " + lastUserMessage.split(" ")[1]; //add a space between first and last name for the 3dr message dispaly
 
-    letterAndemail(letterfiler, errmsg1, botmsg1, fullNmae); //Overridden method
+    letterAndemail(letterfiler, errmsg1, botmsg1, fullName); //Overridden method
     return;
   }
 
