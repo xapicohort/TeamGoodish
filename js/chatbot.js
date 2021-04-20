@@ -11,7 +11,7 @@ function pageLoaded() {
 }
 
 // Button click
-function sendStatement() {
+function sendStatement1() {
   //makeid(8);
   var statement = {
     "actor": {
@@ -41,7 +41,35 @@ function sendStatement() {
   ADL.XAPIWrapper.sendStatement(statement);
 
 }
-
+// question 1
+function sendStatement2() {
+  //makeid(8);
+  var statement = {
+    "actor": {
+      "mbox": "mailto:" + lastUserMessage,
+      "name": uUsername,
+      "objectType": "Agent"
+    },
+    "verb": {
+      "id": "https://w3id.org/xapi/dod-isd/verbs/answered",
+      "display": {
+        "en-US": "answered"
+      }
+    },
+    "object": {
+      "id": "http://adlnet.gov/expapi/activities/question",
+      "definition": {
+        "name": {
+          "en-US": "Question 1"
+        },
+        "description": {
+          "en-US": "chatbot"
+        }
+      },
+      "objectType": "Activity"
+    }
+  }
+  ADL.XAPIWrapper.sendStatement(statement);
 //****************************************************************************************
 
 //gloabl variabls - Rarry
@@ -114,7 +142,8 @@ function chatbotResponse() {
     //Chatlog messages
     messages.push("&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <b>" + 'You' + ":</b> " + vUsername);
     messages.push("<b>" + botName + ":</b> " + botMessage);
-    sendStatement(); //sent Initiation statement
+    sendStatement1(); //initiated
+    sendStatement2(); //send answered question 1 statement
     return;
   }
 }
