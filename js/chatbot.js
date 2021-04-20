@@ -121,7 +121,7 @@ function chatbotResponse() {
 
   if (messages.length.toString() == '5') {
     //messages
-    var newErrMsg = " You can only enter number from 1 to 5! Please try it again!";
+    var newErrMsg = " You can only enter a number from 1 to 5! Please try again!";
     var newbotMessage = "Please enter a number for the characteristics that most closely match the job for which you are sourcing: <br><br> Career-level: <br> &nbsp; &nbsp; 1. Entry level <br> &nbsp; &nbsp; 2. Mid-Career/Management <br> &nbsp; &nbsp; 3. Executive (C-level)";
 
     //Overridden method
