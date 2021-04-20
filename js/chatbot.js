@@ -20,9 +20,9 @@ function sendStatement() {
       "objectType": "Agent"
     },
     "verb": {
-      "id": "http://adlnet.gov/expapi/verbs/completed",
+      "id": "https://w3id.org/xapi/adb/verbs/initiated",
       "display": {
-        "en-US": "completed"
+        "en-US": "initiated"
       }
     },
     "object": {
