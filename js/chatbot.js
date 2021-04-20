@@ -131,7 +131,7 @@ function chatbotResponse() {
 
   if (messages.length.toString() == '7') {
 
-    var newErrMsg = " You can only enter number from 1 to 3! Please try it again!";
+    var newErrMsg = " You can only enter a number from 1 to 3! Please try again!";
     var newbotMessage = "Thank you for your support and effort. Our goal is to help hiring professionals be actively aware and responsive to potential racial bias that occurs when sourcing all candidates. Its purpose is to prevent racial bias and provide everyone a fair chance. We support diversity inclusion and equity. <br><br> Enter any comments, questions, or feedback below.";
 
     options(numberFiler, newErrMsg, newbotMessage, 3); //Overridden method
