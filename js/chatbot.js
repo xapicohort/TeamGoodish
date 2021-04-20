@@ -81,7 +81,7 @@ function chatbotResponse() {
     var letterfiler = /^[A-Za-z]+$/; //letters only
     //mssages
     var errmsg1 = " is not a name! <br> Please enter letters only!";
-    var botmsg1 = "Thanks " + lastUserMessage.substring(0, 50) + "!" + " <br> What is your email adress?";
+    var botmsg1 = "Thanks " + lastUserMessage.substring(0, 50) + "!" + " <br> What is your email address?";
 
     //lastUserMessage.split(" ")[0] &  lastUserMessage.split(" ")[1];
 
