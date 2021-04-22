@@ -111,7 +111,7 @@ function chatbotResponse() {
     messages.push("<b>" + botName + ":</b> " + botMessage);
 
     //initiated
-    sendStatement(lastUserMessage, "https://w3id.org/xapi/adb/verbs/initiated", "initiated", "http://learningdojo.net/xapi/chatbot_initiated", "chatbot_initiated", "chatbot_initiated");
+    sendStatement(lastUserMessage, "https://w3id.org/xapi/adb/verbs/initiated", "initiated", "http://learningdojo.net/xapi/chatbot_initiated", "chatbot", "chatbot");
     return;
   }
 }
