@@ -55,8 +55,9 @@ var messages = [], //array that hold the record of each string in chat
 // the first message
 function botloadingmsg() {
   //var chatboxmsg = document.getElementById("chatbox").placeholder = "";
-  messages.push("<b>" + botName + ": </b>" + "Hello! <br> What is your name?");
+  messages.push("<b>" + botName + ": </b>" + "Hello! <br> What is your first name?");
   document.getElementById("chatlog" + 1).innerHTML = messages[messages.length - 1];
+
 }
 
 //gloabl variabls
@@ -74,17 +75,19 @@ function chatbotResponse() {
 
   //validate users names
   //user name with letters only
+    var botmsg1 = "Thanks " + lastUserMessage.substring(0, 50) + "!" + " <br> What is your email address?";
   if (messages.length.toString() == '1') {
 
     var letterfiler = /^[A-Za-z]+$/; //letters only
     //mssages
     var errmsg1 = " is not a name! <br> Please enter letters only!";
-    var botmsg1 = "Thanks " + lastUserMessage.substring(0, 50) + "!" + " <br> What is your email address?";
+
 
     //lastUserMessage.split(" ")[0] &  lastUserMessage.split(" ")[1];
-    var fullName = lastUserMessage.split(" ")[0] + lastUserMessage.split(" ")[1]; //split the string before and after the first space
-    vuser = lastUserMessage.split(" ")[0] + " " + lastUserMessage.split(" ")[1]; //add a space between first and last name for the 3dr message dispaly
-    letterAndemail(letterfiler, errmsg1, botmsg1, fullName); //Overridden method
+    //var fullName = lastUserMessage.split(" ")[0] + lastUserMessage.split(" ")[1]; //split the string before and after the first space
+    //vuser = lastUserMessage.split(" ")[0] + " " + lastUserMessage.split(" ")[1]; //add a space between first and last name for the 3dr message dispaly
+    letterAndemail(letterfiler, errmsg1, botmsg1, lastUserMessage); //Overridden method
+
     return;
   }
 
@@ -105,13 +108,13 @@ function chatbotResponse() {
     document.getElementById("inputerrorMsge").innerHTML = "";
     vUsername = lastUserMessage.substring(0, 50);
     //chatbox messages
-    botMessage = "Thank you, " + vuser + "!" + "<br> <br> We all have unconscious biases. To act on our values for diversity and inclusion, it is important that we identify and interrupt our biases to avoid making decisions based on them. <br> <br> Let’s review how racial bias often turns up the sourcing process for new hires. This chatbot will help you to assess your own ability to interrupt racial bias and it will provide you with tools and resources, if needed. <br><br> Self assessment: Do you agree with the following statement? <br><br> <i>&quot;I am aware of how racial bias occurs in the sourcing process.&quot;</i> <br><br> &nbsp; &nbsp; 1. Strongly agree <br> &nbsp; &nbsp; 2. Agree <br>&nbsp; &nbsp; 3. Unsure <br> &nbsp; &nbsp; 4. Disagree <br>&nbsp; &nbsp;  5. Strongly disagree <br> <br><i>Enter a number to respond.</i>";;
+    botMessage = "Thank you!" + "<br> <br> We all have unconscious biases. To act on our values for diversity and inclusion, it is important that we identify and interrupt our biases to avoid making decisions based on them. <br> <br> Let’s review how racial bias often turns up the sourcing process for new hires. This chatbot will help you to assess your own ability to interrupt racial bias and it will provide you with tools and resources, if needed. <br><br> Self assessment: Do you agree with the following statement? <br><br> <i>&quot;I am aware of how racial bias occurs in the sourcing process.&quot;</i> <br><br> &nbsp; &nbsp; 1. Strongly agree <br> &nbsp; &nbsp; 2. Agree <br>&nbsp; &nbsp; 3. Unsure <br> &nbsp; &nbsp; 4. Disagree <br>&nbsp; &nbsp;  5. Strongly disagree <br> <br><i>Enter a number to respond.</i>";;
     //Chatlog messages
     messages.push("&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <b>" + 'You' + ":</b> " + vUsername);
     messages.push("<b>" + botName + ":</b> " + botMessage);
 
     //initiated
-    sendStatement(lastUserMessage, "https://w3id.org/xapi/adb/verbs/initiated", "initiated", "http://learningdojo.net/xapi/chatbot_initiated", "chatbot", "chatbot");
+    sendStatement(lastUserMessage, "https://w3id.org/xapi/adb/verbs/initiated", "initiated", "http://learningdojo.net/xapi/chatbot_initiated", "chatbot_initiated", "chatbot_initiated");
     return;
   }
 }
@@ -279,10 +282,24 @@ function newEntry() {
     //set focus on the chatbox
     document.getElementById("chatbox").focus();
     //outputs the last few array elements of messages to html
-    for (var i = 1; i < 15; i++) {
+    for (var i = 1; i < 14; i++) {
       if (messages[messages.length - i])
         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
     }
+
+    if( messages.length < 4){
+      var urlValue = document.getElementById("chatborder");
+        urlValue.setAttribute('style', "overflow-y: hidden;");
+
+  } else {
+
+      var urlValue1 = document.getElementById("chatborder");
+      urlValue1.setAttribute('style', "overflow-y: scroll;");
+   }
+
+    //set the scrolling bar statying botton
+    var chatHistorybar = document.getElementById("chatborder");
+    chatHistorybar.scrollTop = chatHistorybar.scrollHeight;
   }
 }
 
