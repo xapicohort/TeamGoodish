@@ -287,7 +287,7 @@ function newEntry() {
         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
     }
 
-    if( messages.length < 4){
+    if( messages.length < 6){
       var urlValue = document.getElementById("chatborder");
         urlValue.setAttribute('style', "overflow-y: hidden;");
 
